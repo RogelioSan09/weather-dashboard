@@ -1,0 +1,46 @@
+header{
+    text-align: center;
+    background-color: navy;
+    color: white;
+    border: 1px solid black;
+}
+
+.main-container{
+    display: flex;
+}
+
+#left-side{
+    width: 33.5%;
+    height: 100%;
+    float: left;
+    border: 1px solid black;
+}
+
+#right-side{
+    width: 66.5%;
+    float: right;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#current-conditions{
+    text-align: left;
+}
+
+.container{
+    background-color: rgb(73, 164, 200);
+    border: 1px solid black;
+}
+
+.forecast-container{
+    width: 15%;
+    display: inline-block;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    margin: 2%;
+    text-align: left;
+}
+
+ul{
+    list-style-type: none;
+}
