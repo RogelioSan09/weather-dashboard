@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css"/>
+    <title>5-Day-Weather-Forecast</title>
+</head>
+
+<body>
+    <!-- Added a header for the webpages tile -->
+    <header id="main-title" class="container">
+        <h1 class="title-text">Weather Dashboard</h1>
+    </header>
+
+    <!-- Created a main element to hold all content related to the weather search -->
+    <main class="main-container">
+        <!-- Used the aside element to place the search form to one side of the page, the location will be assigned using css -->
+        <aside>
+            <section id="city-search" class="container">
+                <form id="search-form">
+                        <h2>Search for a City:</h2>
+                        <label for="search-city"></label>
+                        <input id="search-city" class="search-text" placeholder="San Francisco"> </input>
+                        <button id="search-btn" class="button-text">Search</button>
+                </form>
+                <!-- Fieldset holds the user's previous searches -->
+                <section id="search-history">
+                    <h2>Search History:</h2>
+                    <ul>
+                        <li id="query-1"></li>
+                        <li id="query-2"></li>
+                        <li id="query-3"></li>
+                    </ul>
+                </section>
+            </section>
+        </aside>
+
+        <!-- Used the aside element to place the weather information to one side of the page, the location will be assigned using css -->
+        <aside id="right-side">
+            <!-- This section holds the weather conditions at the present time of query -->
+            <section id="current-conditions" class="container">
+                <h2>Current City:</h2>
+                <h3 id="current-city"></h3>
+                <h4 id="current-date"></h4>
+                <i class="weather-icon"></i>
+                <ul>
+                    <li>Temp:<span id="current-temp"></span></li>
+                    <li>Wind:<span id="current-wind-speed"></span></li>
+                    <li>Humidity:<span id="current-humidity"></span></li>
+                </ul>
+            </section>
+
+            <section id="five-day-forecast" class="container">
+                <h2>5-Day Forecast:</h2>
+                <!-- This section holds the data for the weather forecast of day one -->
+                <section class="forecast-container">
+                    <h3 id="day-1"></h3>
+                    <i class="weather-icon"></i>
+                    <!-- Weather data will be displayed here for Temp, Wind, and Humidity -->
+                    <ul>
+                        <li class="temp-text">Temp:<span class="temp"></span></li>
+                        <li class="wind-text">Wind:<span class="wind-speed"></span></li>
+                        <li class="humidity-text">Humidity:<span class="humidity"></span></li>
+                    </ul>
+                </section>
+                
+                <!-- This section holds the data for the weather forecast of day two -->
+                <section class="forecast-container">
+                    <h3 id="day-2"></h3>
+                    <i class="weather-icon"></i>
+                    <ul>
+                        <li class="temp-text">Temp:<span class="temp"></span></li>
+                        <li class="wind-text">Wind:<span class="wind-speed"></span></li>
+                        <li class="humidity-text">Humidity:<span class="humidity"></span></li>
+                    </ul>
+                </section>
+
+                <!-- This section holds the data for the weather forecast of day three -->
+                <section class="forecast-container">
+                    <h3 id="day-3"></h3>
+                    <i class="weather-icon"></i>
+                    <ul>
+                        <li class="temp-text">Temp:<span class="temp"></span></li>
+                        <li class="wind-text">Wind:<span class="wind-speed"></span></li>
+                        <li class="humidity-text">Humidity:<span class="humidity"></span></li>
+                    </ul>
+                </section>
+
+                <!-- This section holds the data for the weather forecast of day four -->
+                <section class="forecast-container">
+                    <h3 id="day-4"></h3>
+                    <i class="weather-icon"></i>
+                    <ul>
+                        <li class="temp-text">Temp:<span class="temp"></span></li>
+                        <li class="wind-text">Wind:<span class="wind-speed"></span></li>
+                        <li class="humidity-text">Humidity:<span class="humidity"></span></li>
+                    </ul>
+                </section>
+
+                <!-- This section holds the data for the weather forecast of day five -->
+                <section class="forecast-container">
+                    <h3 id="day-5"></h3>
+                    <i class="weather-icon"></i>
+                    <ul>
+                        <li class="temp-text">Temp:<span class="temp"></span></li>
+                        <li class="wind-text">Wind:<span class="wind-speed"></span></li>
+                        <li class="humidity-text">Humidity:<span class="humidity"></span></li>
+                    </ul>
+                </section>
+            </section>
+        </aside>
+    </main>
+    
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
