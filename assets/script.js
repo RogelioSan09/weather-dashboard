@@ -41,7 +41,7 @@ function getWeather(event) {
     localStorage.setItem('inputValue', JSON.stringify(inputValue));
 
     // the URL where the API call will be made
-    let requestUrl = 'http://api.openweathermap.org/data/2.5/forecast?q=' + inputValue + '&limit=1&appid=' + APIkey + '&units=imperial';
+    let requestUrl = 'https://api.openweathermap.org/data/2.5/forecast?q=' + inputValue + '&limit=1&appid=' + APIkey + '&units=imperial';
     console.log(requestUrl);
   
     // fetching the data
