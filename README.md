@@ -8,7 +8,9 @@ The application allows users to obtain current weather conditions and a 5-day we
 * [Contributing](#contributing)
 * [Questions](#questions)
 ## Usage
-N/A
+![Weather-Layout](assets/images/Dashboard.png)
+
+![Demo](assets/images/Demo.gif)
 ## License
 Project is licensed under the [MIT](https://choosealicense.com/licenses/mit/) License
 ## Contributing

@@ -6,6 +6,7 @@ let currentWeatherIcon = $('#current-weather-icon');
 let currentTemp = $('#current-temp');
 let currentWindSpeed = $('#current-wind-speed');
 let currentHumidity = $('#current-humidity');
+let  searchHistory1 = $('query-1');
 
 // Created a function to obtain the current date
 function obtainDate(){
@@ -19,10 +20,25 @@ obtainDate();
 function getWeather(event) {
     event.preventDefault();
 
+    let storedData = localStorage.getItem('inputValue');
+
+    // parse the JSON string back into an object
+    storedData = JSON.parse(storedData);
+
+    // log the data to the console
+    console.log(storedData);
+
+    // For the sake of getting results/data I will be using the api key in this manner.
+    // I will protect keys better in the future.
     let APIkey = "56dbff74c0ac3fba85a5a517abf01ddb";
     let searchCity = $('#search-city');
     let inputValue = searchCity.val();
     console.log(searchCity);
+
+    // storing the queery in local storage
+    let query1 = $('#query-1');
+    query1.text(inputValue);
+    localStorage.setItem('inputValue', JSON.stringify(inputValue));
 
     // the URL where the API call will be made
     let requestUrl = 'http://api.openweathermap.org/data/2.5/forecast?q=' + inputValue + '&limit=1&appid=' + APIkey + '&units=imperial';
@@ -37,6 +53,7 @@ function getWeather(event) {
       .then(function (data) {
         console.log("data", data)
 
+        // used the text() to render the data values
         currentCity.text(data.city.name);
         currentWeatherIcon.text(data.list[0].weather[0].icon);
         currentTemp.text(data.list[0].main.temp);
@@ -50,18 +67,23 @@ function getWeather(event) {
 
 // Gets the five day forecast and renders the data
 function fiveDayForecast(data){
+    // obtain current date
     var today = dayjs();
 
+    // obtained the data and rendered the data according to the 
+    // date they correspond to in the forecast, loops 5 times
     for(let i=1; i<=5; i++){
         let day = i;
 
         if (day == 1){
+            // getting elements by id
             let forecastDay = $('#day-1');
             let weatherIcon = $('#weather-icon1');
             let temp = $('#temp1');
             let windSpeed = $('#wind-speed1');
             let humidity = $('#humidity1');
 
+            // adds i amount of days from the point of the current date
             let date = today.add(i, 'day')
             forecastDay.text(date.format('MM/DD/YYYY'));
 
@@ -134,4 +156,8 @@ function fiveDayForecast(data){
     }
 }
 
+// An event listener, upon submitting query for a city, the getWeather function executes 
 searchForm.on('submit', getWeather);
+
+searchHistory1.on('click', getWeather);
+    
