@@ -1,0 +1,8 @@
+{
+    "name": "weather-dashboard",
+    "version": "1.0.0",
+    "license": "MIT",
+    "dependencies": {
+        "dotenv": "^16.3.1"
+    }
+}

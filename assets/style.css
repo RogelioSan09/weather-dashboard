@@ -24,7 +24,7 @@ header{
 }
 
 #current-conditions{
-    text-align: left;
+    text-align: center;
 }
 
 .container{
@@ -38,7 +38,7 @@ header{
     background-color: whitesmoke;
     border: 1px solid black;
     margin: 2%;
-    text-align: left;
+    text-align: center;
 }
 
 ul{

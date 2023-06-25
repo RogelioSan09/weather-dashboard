@@ -22,7 +22,7 @@
                 <form id="search-form">
                         <h2>Search for a City:</h2>
                         <label for="search-city"></label>
-                        <input id="search-city" class="search-text" placeholder="San Francisco"> </input>
+                        <input id="search-city" class="search-text" placeholder="San Francisco"></input>
                         <button id="search-btn" class="button-text">Search</button>
                 </form>
                 <!-- Fieldset holds the user's previous searches -->
@@ -44,11 +44,11 @@
                 <h2>Current City:</h2>
                 <h3 id="current-city"></h3>
                 <h4 id="current-date"></h4>
-                <i class="weather-icon"></i>
+                <i class="current-weather-icon"></i>
                 <ul>
-                    <li>Temp:<span id="current-temp"></span></li>
-                    <li>Wind:<span id="current-wind-speed"></span></li>
-                    <li>Humidity:<span id="current-humidity"></span></li>
+                    <li>Temp: <span id="current-temp"></span></li>
+                    <li>Wind: <span id="current-wind-speed"></span></li>
+                    <li>Humidity: <span id="current-humidity"></span></li>
                 </ul>
             </section>
 
@@ -57,61 +57,64 @@
                 <!-- This section holds the data for the weather forecast of day one -->
                 <section class="forecast-container">
                     <h3 id="day-1"></h3>
-                    <i class="weather-icon"></i>
+                    <i id="weather-icon1"></i>
                     <!-- Weather data will be displayed here for Temp, Wind, and Humidity -->
                     <ul>
-                        <li class="temp-text">Temp:<span class="temp"></span></li>
-                        <li class="wind-text">Wind:<span class="wind-speed"></span></li>
-                        <li class="humidity-text">Humidity:<span class="humidity"></span></li>
+                        <li class="temp-text">Temp: <span id="temp1"></span></li>
+                        <li class="wind-text">Wind: <span id="wind-speed1"></span></li>
+                        <li class="humidity-text">Humidity: <span id="humidity1"></span></li>
                     </ul>
                 </section>
                 
                 <!-- This section holds the data for the weather forecast of day two -->
                 <section class="forecast-container">
                     <h3 id="day-2"></h3>
-                    <i class="weather-icon"></i>
+                    <i id="weather-icon2"></i>
                     <ul>
-                        <li class="temp-text">Temp:<span class="temp"></span></li>
-                        <li class="wind-text">Wind:<span class="wind-speed"></span></li>
-                        <li class="humidity-text">Humidity:<span class="humidity"></span></li>
+                        <li class="temp-text">Temp: <span id="temp2"></span></li>
+                        <li class="wind-text">Wind: <span id="wind-speed2"></span></li>
+                        <li class="humidity-text">Humidity: <span id="humidity2"></span></li>
                     </ul>
                 </section>
 
                 <!-- This section holds the data for the weather forecast of day three -->
                 <section class="forecast-container">
                     <h3 id="day-3"></h3>
-                    <i class="weather-icon"></i>
+                    <i id="weather-icon"></i>
                     <ul>
-                        <li class="temp-text">Temp:<span class="temp"></span></li>
-                        <li class="wind-text">Wind:<span class="wind-speed"></span></li>
-                        <li class="humidity-text">Humidity:<span class="humidity"></span></li>
+                        <li class="temp-text">Temp: <span id="temp3"></span></li>
+                        <li class="wind-text">Wind: <span id="wind-speed3"></span></li>
+                        <li class="humidity-text">Humidity: <span id="humidity3"></span></li>
                     </ul>
                 </section>
 
                 <!-- This section holds the data for the weather forecast of day four -->
                 <section class="forecast-container">
                     <h3 id="day-4"></h3>
-                    <i class="weather-icon"></i>
+                    <i id="weather-icon"></i>
                     <ul>
-                        <li class="temp-text">Temp:<span class="temp"></span></li>
-                        <li class="wind-text">Wind:<span class="wind-speed"></span></li>
-                        <li class="humidity-text">Humidity:<span class="humidity"></span></li>
+                        <li class="temp-text">Temp: <span id="temp4"></span></li>
+                        <li class="wind-text">Wind: <span id="wind-speed4"></span></li>
+                        <li class="humidity-text">Humidity: <span id="humidity4"></span></li>
                     </ul>
                 </section>
 
                 <!-- This section holds the data for the weather forecast of day five -->
                 <section class="forecast-container">
                     <h3 id="day-5"></h3>
-                    <i class="weather-icon"></i>
+                    <i id="weather-icon"></i>
                     <ul>
-                        <li class="temp-text">Temp:<span class="temp"></span></li>
-                        <li class="wind-text">Wind:<span class="wind-speed"></span></li>
-                        <li class="humidity-text">Humidity:<span class="humidity"></span></li>
+                        <li class="temp-text">Temp: <span id="temp5"></span></li>
+                        <li class="wind-text">Wind: <span id="wind-speed5"></span></li>
+                        <li class="humidity-text">Humidity: <span id="humidity5"></span></li>
                     </ul>
                 </section>
             </section>
         </aside>
     </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.8/dayjs.min.js" integrity="sha512-af90l7+r/ujCury3kqomcoZ4aNuC4JP0xUUU682bqlRCLLvGJrc9L82zONFccLWmxcMXSqO9d6C7Rr39EkbT3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     <script src="assets/script.js"></script>
 </body>
